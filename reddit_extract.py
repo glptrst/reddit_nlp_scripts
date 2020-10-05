@@ -23,7 +23,7 @@ def comment_extract(comment):
         return c
     else:
         return {
-            'author': comment.author.name,
+            'author': comment.author.name if comment.author else 'none?',
             'body': comment.body,
             'replies': []
         }
